@@ -96,7 +96,7 @@ public class TestLinkAdapter {
     /**
      * Initalize class.
      * @param url testlink server url
-     * @param key developer key
+     * @param dev_key developer key
      * @throws uQasarException 
      */
     public TestLinkAdapter(String url, String dev_key) throws uQasarException {
@@ -392,7 +392,7 @@ public class TestLinkAdapter {
     	Execution res = null;
     	
     	try {
-    		res = api.getLastExecutionResult(testPlanId, testCaseId, testCaseExternalId);
+    		res = api.getLastExecutionResult(testPlanId, testCaseId, testCaseExternalId.toString(), null, null, null, null, null);
         } catch (TestLinkAPIException ex) {
     		System.out.println("TestLinkAPIException " + ex.getMessage());
     		res = null;
