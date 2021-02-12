@@ -114,7 +114,7 @@ public class TestLinkAdapter {
     		// Create empty HostnameVerifier
     		HostnameVerifier hv = new HostnameVerifier() {
     			public boolean verify(String arg0, SSLSession arg1) {
-    				return true;
+    				return false;
     			}
     		};
 
